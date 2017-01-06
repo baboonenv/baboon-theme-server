@@ -54,6 +54,11 @@ class DefaultController extends Controller
             'zipUrl' => 'https://github.com/behram/baboon-default-theme/archive/master.zip',
             'gitUrl' => 'git@github.com:behram/baboon-default-theme.git',
         ];
+        $data[] = [
+            'themeName' => 'Baboon Configuration Theme',
+            'zipUrl' => 'https://github.com/behram/baboon-configuration-theme/archive/master.zip',
+            'gitUrl' => 'git@github.com:behram/baboon-configuration-theme.git',
+        ];
 
         return new JsonResponse($data);
     }
