@@ -19,3 +19,4 @@ script:
 
 notifications:
   slack: deepkod:3mFVJfNiCfoG3eGw3V4kD7PX#baboon
+  email: false
