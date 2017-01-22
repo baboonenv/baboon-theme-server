@@ -1,0 +1,21 @@
+language: php
+
+php:
+  - 7.0
+
+sudo: false
+
+before_script:
+  - phpenv config-add travis.php.ini
+  - phpenv config-rm xdebug.ini
+  - cp app/config/parameters.yml.dist app/config/parameters.yml
+  - cp ./phpunit.xml.dist ./phpunit.xml
+  - composer install --no-interaction --prefer-dist
+  - chmod -R 777 var/cache var/logs
+  - composer show
+
+script:
+  - phpunit -c phpunit.xml
+
+notifications:
+  slack: deepkod:3mFVJfNiCfoG3eGw3V4kD7PX#baboon
