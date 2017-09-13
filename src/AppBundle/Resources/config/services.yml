@@ -1,0 +1,16 @@
+services:
+  baboon_server.tools_service:
+    class: AppBundle\Service\ToolsService
+    arguments:
+      - "@kernel"
+
+  baboon_server.enable_theme_service:
+    class: AppBundle\Service\ThemeService
+    arguments:
+      - "@baboon_server.tools_service"
+      - "@baboon.panel.validate_configuration"
+
+  baboon.panel.validate_configuration:
+    class: AppBundle\Service\ValidateConfigurationService
+    arguments:
+      - "@baboon_server.tools_service"

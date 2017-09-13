@@ -1,0 +1,19 @@
+AppBundle\Entity\Theme:
+    type: entity
+    table: bs_theme
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: true
+        zipUrl:
+            type: string
+            nullable: false
+        gitUrl:
+            type: string
+            nullable: false

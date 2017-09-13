@@ -1,0 +1,13 @@
+{% if messages|length > 0 %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<form action="/" method="post">
+    <input name="zipUri" placeholder="zip path"/>
+    <button type="submit">Add Theme</button>
+</form>
+
+<a href="{{ path('categories') }}">Categories</a>
